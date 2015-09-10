@@ -8,15 +8,19 @@
 	<!-- <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
 	
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/dropzone.min.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/custom.css">
 	
 	<!-- JS -->
+	<script src="js/dropzone.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 
-	<title>EventHub</title>
+	<title>Create an Event</title>
 </head>
 <body>
 
@@ -26,7 +30,7 @@
 
 	        <div class="navbar-header">
 	            <button type="button" class="navbar-toggle" data-toggle="collapse"
-	                data-target="#bs-example-navbar-collapse-1">
+	                    data-target="#bs-example-navbar-collapse-1">
 	                <span class="sr-only">Toggle navigation</span>
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
@@ -43,8 +47,7 @@
 	                <li><a class="btn btn-launch" href="javascript:;" data-toggle="modal" data-target="#loginModal">Sign Up</a>
 	                <li><a class="btn btn-launch" href="javascript:;" data-toggle="modal" data-target="#loginModal">Log In</a>
 	                <li><a href="about.html">About</a></li>
-	                <li><a href="create_event.html" style="color: #83C4CB;">Create Event</a></li>
-	                <!-- <li><a href="#"><button type="button" class="">Create Event</button></a></li> -->
+	                <li><a href="#" style="color: #83C4CB;">Create Event</a></li>
 	            </ul>
 	        </div>
 
@@ -77,14 +80,14 @@
 						    		<form>
 										<div class="form-group">
 									    	<div class="input-group">
-									      		<div class="input-group-addon"><i class="fa fa-user"></i></div>
+									      		<div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
 									      		<input type="text" class="form-control" id="login_username" placeholder="Username">
 									    	</div>
 									    	<span class="help-block has-error" id="email-error"></span>
 									  	</div>
 									  	<div class="form-group">
 									    	<div class="input-group">
-									      		<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+									      		<div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
 									      		<input type="password" class="form-control" id="password" placeholder="Password">
 									    	</div>
 									    	<span class="help-block has-error" id="password-error"></span>
@@ -105,14 +108,14 @@
 						    		<form>
 										<div class="form-group">
 									    	<div class="input-group">
-									      		<div class="input-group-addon"><i class="fa fa-user"></i></div>
+									      		<div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
 									      		<input type="text" class="form-control" id="username" placeholder="Username">
 									    	</div>
 									    	<span class="help-block has-error" data-error='0' id="username-error"></span>
 									  	</div>
 									  	<div class="form-group">
 									    	<div class="input-group">
-									      		<div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+									      		<div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
 									      		<input type="text" class="form-control" id="remail" placeholder="Email">
 									    	</div>
 									    	<span class="help-block has-error" data-error='0' id="remail-error"></span>
@@ -141,41 +144,162 @@
 		   </div>
 	 	</div>
  	<!-- - Login Model Ends Here -->
-
-	<ol class="breadcrumb">
-	  <li><a href="javascript:history.back()">Home</a></li>
-	  <li><a href="#">Lollapalooza</a></li>
-	</ol>
-
-	<div class="container-fluid banner info_banner">
-		<div class="item">
-	        <img src="img/event_imgs/lolla.jpg" alt="Lollapalooza">
-	    </div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="top_header">Create An Event</h1>
+			</div>
+		</div>
 	</div>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-12">
-				<img src="img/event_imgs/lolla-logo.png" alt="Lolla Logo">
-				<p class="info"><strong>Lollapalooza</strong> is an annual music festival featuring popular alternative rock, heavy metal, punk rock, hip hop and EDM bands and artists, dance and comedy performances and craft booths. It has also provided a platform for non-profit and political groups and various visual artists.</p>
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6 details">
-						<h2>Details</h2>
-						<p>Time: 9am - 9pm</p><br>
-						<p>Location: Grant Park</p><br>
-						<p>Price of Admission: $$$</p><br>
-						<p><a href="http://www.lollapalooza.com/" target="_blank"><em>Official Page of Event</em></a></p>
+			<div class="col-md-9 move-right">
+				<form>
+
+					<div class="form-group">
+				    	<label for="eventName">Event Name <em class="required">(required)</em></label>
+				    	<input type="text" class="form-control" id="eventName" placeholder="What would you like to call your event?">
+				  	</div>
+					<br>
+				  	<div class="form-group">
+					    <label for="eventLoc">Where <em class="required">(required)</em></label>
+					    <input type="text" class="form-control" id="eventLoc" placeholder="Type an address or a venue">
+				 	</div>
+				  	<br>
+				  	<div>
+				  		<p class="when">When <em class="required">(required)</em></p>
+				 	</div>
+				  	
+				  	<div class="row">
+					  	<div class="col-md-2">
+					  		<div class="form-group center-text">
+							    <label for="eventTime" class="time">Start Date</label>
+							    <input type="text" class="form-control when-input" id="eventTime" placeholder="mm/dd/yyyy">
+							</div>
+				  		</div>
+
+					  	<div class="col-md-2">
+					  		<div class="form-group center-text">
+							    <label for="eventTime" class="time">Start Time</label>
+							    <input type="text" class="form-control when-input" id="eventTime" placeholder="9:00am">
+							</div>
+					  	</div>
+
+					  	<div class="col-md-offset-1 col-md-2">
+					  		<div class="form-group center-text">
+							    <label for="eventTime" class="time">End Date</label>
+							    <input type="text" class="form-control when-input" id="eventTime" placeholder="mm/dd/yyyy">
+							</div>
+					  	</div>
+
+					  	<div class="col-md-2">
+					  		<div class="form-group center-text">
+							    <label for="eventTime" class="time">End Time</label>
+							    <input type="text" class="form-control when-input" id="eventTime" placeholder="9:00am">
+							</div>
+					  	</div>
+				 	</div>
+					
+					<br>
+					<div class="form-group">
+					    <label for="eventLoc">Event Description <em class="required">(required)</em></label>
+					    <textarea class="form-control" rows="8" placeholder="Let people know what the event is about"></textarea>
+				 	</div>
+					<br>
+				 	<div class="form-group">
+					    <label for="eventCost">Event Admission <em class="required">(required)</em></label>
+					    <input type="text" class="form-control eventCost" id="eventCost" placeholder="How much will it cost to attend this event?">
+				 	</div>
+
+				 	<div class="checkbox">
+						<label class="freeEvent">
+					    <input type="checkbox" value="free">
+					    This is a FREE event.
+					  	</label>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 action_buttons">
-						<a href="#"><button type="button" class="action">Share Event</button></a><br>
-						<a href="http://www.lollapalooza.com/tickets/" target="_blank"><button type="button" class="action">Buy Tickets</button></a><br>
-						<a href="#"><button type="button" class="action">Contact Organizer</button></a><br>
+					<br>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="form-group">
+							    <label for="eventCat">Event Category <em class="required">(required)</em></label>
+							    <select class="form-control">
+							    	<option>Please select an event category</option>
+									<option>Festival</option>
+								 	<option>Fair</option>
+								  	<option>Public</option>
+								  	<option>Networking</option>
+								  	<option>Sports</option>
+								  	<option>Arts</option>
+								  	<option>Seminar</option>
+								  	<option>Party</option>
+								  	<option>Expo</option>
+								  	<option>Conference</option>
+								  	<option>Tournament</option>
+								  	<option>Other</option>
+								</select>
+						 	</div>
+						</div>
+
+						<div class="col-md-5">
+							<div class="form-group">
+							    <label for="eventOrg">Organizer's Name <em class="required">(required)</em></label>
+							    <input type="text" class="form-control" id="eventOrg" placeholder="Who’s setting up this event?">
+						 	</div>
+						</div>
+					</div>
+					<br>
+
+					<div class="row">
+						<div class="col-md-5">
+							<div class="form-group">
+							    <label for="eventPage">Event Official Page</label>
+							    <input type="text" class="form-control" id="eventOrg" placeholder="URL of the event’s official page">
+						 	</div>
+						</div>
+
+						<div class="col-md-5">
+							<div class="form-group">
+							    <label for="eventPage">Organizer's Email <em class="required">(required)</em></label>
+							    <input type="email" class="form-control" id="orgEmail" placeholder="What’s the organizer’s email address?">
+						 	</div>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="form-group">
+							    <label for="eventPage">Event Ticket Purchasing Page</label>
+							    <input type="text" class="form-control" id="eventOrg" placeholder="URL to purchase tickets">
+						 	</div>
+						</div>
+					</div>
+					<br>
+				</form>
+				<div class="row">
+
+					<div class="col-md-5">
+						<p style="text-align: center">Event Banner</p>
+						<div class="border">
+							<form action="/file-upload" class="dropzone"id="my-awesome-dropzone">
+							
+							</form>
+						</div>
+					</div>
+
+					<div class="col-md-5">
+						<p style="text-align: center">Event Thumbnail</p>
+						<div class="border">
+							<form action="/file-upload" class="dropzone"id="my-awesome-dropzone">
+							
+							</form>
+						</div>
 					</div>
 				</div>
-
-			</div>
-			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 map">
-				<img src="img/event_imgs/grant_map.png" alt="Map">
+				<br>
+				<br>
+				<button type="submit" class="btn btn-default form-submit">Publish This Event</button>
 			</div>
 		</div>
 	</div>
@@ -183,12 +307,12 @@
 	<!-- Footer -->
 	<footer>
 		<div class="row">
-			<div class="col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<div class="col-lg-offset-5 col-md-offset-5 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">
 				<img src="img/eventhub_logo.png" class="footer_logo" alt="">
 			</div>
 		</div>
 	</footer>
-	
+
 	<script>
 	$(document).ready(function(){
 		$(document).on('click','.signup-tab',function(e){

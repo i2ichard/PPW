@@ -8,8 +8,9 @@
 	<!-- <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
 	
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/custom.css">
 	
 	<!-- JS -->
@@ -143,39 +144,45 @@
  	<!-- - Login Model Ends Here -->
 
 	<ol class="breadcrumb">
-	  <li><a href="javascript:history.back()">Home</a></li>
-	  <li><a href="#">Lollapalooza</a></li>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="#">About</a></li>
 	</ol>
 
-	<div class="container-fluid banner info_banner">
-		<div class="item">
-	        <img src="img/event_imgs/lolla.jpg" alt="Lollapalooza">
+	<div class="container-fluid banner">
+		<div class="about-banner">
+	        <img src="img/city2.jpg" alt="Chicago">
+	        <h2 class="over hidden-xs">Chicago is an amazing city with countless events to part-take in. <br />Let’s get everyone involved! </h2>
+	        <p class="over hidden-sm hidden-md hidden-lg">Chicago is an amazing city with countless events to part-take in. <br />Let’s get everyone involved! </p>
+			<div class="row about-page-buttons">
+				<a href="create_event.html"><button type="button" class="action btn-2 hidden-sm hidden-xs">Create an Event</button></a>
+				<a href="index.html"><button type="button" class="action btn-2 hidden-sm hidden-xs">Browse Events</button></a>
+			</div>
+	        
 	    </div>
 	</div>
 
 	<div class="container">
 		<div class="row">
+			<div class="col-xs-6 hidden-xl hidden-lg hidden-md">
+				<br />
+				<a href="create_event.html"><button type="button" class="action btn-2">Create an Event</button></a>
+			</div>
+			<div class="col-xs-6 hidden-xl hidden-lg hidden-md">
+				<br />
+				<a href="index.html"><button type="button" class="action btn-2">Browse Events</button></a>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-12">
-				<img src="img/event_imgs/lolla-logo.png" alt="Lolla Logo">
-				<p class="info"><strong>Lollapalooza</strong> is an annual music festival featuring popular alternative rock, heavy metal, punk rock, hip hop and EDM bands and artists, dance and comedy performances and craft booths. It has also provided a platform for non-profit and political groups and various visual artists.</p>
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6 details">
-						<h2>Details</h2>
-						<p>Time: 9am - 9pm</p><br>
-						<p>Location: Grant Park</p><br>
-						<p>Price of Admission: $$$</p><br>
-						<p><a href="http://www.lollapalooza.com/" target="_blank"><em>Official Page of Event</em></a></p>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 action_buttons">
-						<a href="#"><button type="button" class="action">Share Event</button></a><br>
-						<a href="http://www.lollapalooza.com/tickets/" target="_blank"><button type="button" class="action">Buy Tickets</button></a><br>
-						<a href="#"><button type="button" class="action">Contact Organizer</button></a><br>
-					</div>
-				</div>
-
+				<h2>Mission</h2>
+				<p class="info">EventHub wants to bring everyone in Chicago a little bit closer. What better way than to get all of its good citizens out to more local events? Let’s discover and part-take in the fun events that this amazing city has to offer! </p>
 			</div>
 			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 map">
-				<img src="img/event_imgs/grant_map.png" alt="Map">
+				<h2>Contact Us</h2>
+				<p><i class="fa fa-phone-square fa-2x"></i> Phone: (312)-310-7747</p>
+				<p><i class="fa fa-envelope fa-2x"></i> Email:<a href="hello@eventhub.com"> hello@eventhub.com</a></p>
+				<p><i class="fa fa-facebook-official fa-2x"></i><a href="#"> Facebook/eventhub</a></p>
+				<p><i class="fa fa-instagram fa-2x"></i><a href="#"> Instagram/eventhub</a></p>
 			</div>
 		</div>
 	</div>
@@ -183,7 +190,7 @@
 	<!-- Footer -->
 	<footer>
 		<div class="row">
-			<div class="col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<div class="col-lg-offset-5 col-md-offset-5 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">
 				<img src="img/eventhub_logo.png" class="footer_logo" alt="">
 			</div>
 		</div>
